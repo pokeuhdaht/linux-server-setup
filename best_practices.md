@@ -71,6 +71,7 @@ Fail2Ban is an intrusion prevention software that bans the IP of machines attemp
 Install Fail2Ban by performing the following commands:
 
   sudo apt update
+  
   sudo apt install fail2ban
 
 Enable on boot by performing this command:
