@@ -22,15 +22,13 @@ sudo usermod -s /sbin/nologin root
 </p>
 <h3><ins>Admin/sudo Account</ins></h3>
 <p>usermod -aG sudo [username]
-newgrp sudo
-</p>>
+newgrp sudo</p>
 <h3><ins>Docker User Account</ins></h3>
-<p>
-(The "docker" group is created when docker engine is installed.)
+<p>(The "docker" group is created when docker engine is installed.)
 
 sudo usermod -aG docker [user]
-newgrp docker
-</p>
+newgrp docker</p>
+
 <h3><ins>Local User Account</ins></h3>
 <p>sudo groupadd [groupname]
 sudo chgrp [groupname] /path/to/target
@@ -38,11 +36,8 @@ sudo chgrp [groupname] /path/to/target
 (This is the path to the file/directory .... adding -R will allow the changes to be made recursively)
 
 sudo chmod 770 /path/to/target
-This will give Read, Write, & Execute permissions to the given file/directory to the (1) Owner (2) Group 
-
-</p>
+This will give Read, Write, & Execute permissions to the given file/directory to the (1) Owner (2) Group</p>
 <h2>SSH Securely</h2>
-
 <h3><ins>Generate & Add Key Pair for SSH Login</ins></h3>
 <p>Genereate Key Piar:
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -72,6 +67,15 @@ PasswordAuthentication no
 <h2>Firewall & Network</h2>
 
 <h3><ins>Install Fail2Ban</ins></h3>
-<p>Fail2Ban is a </p>
+<p>Fail2Ban is an intrusion prevention software that bans the IP of machines attempting brute-force login requests.
+Install Fail2Ban by performing the following commands:
+sudo apt update
+sudo apt install fail2ban
+</p>
 
+<h3><ins>Automatic System Upgrades</ins></h3>
+<p>unattended-upgrades works well, however I would like to run a cron job that checks for upgrade and sends a Webhook message via an app like discord.</p>
+
+<h3><ins>Trim Unused Packages</ins></h3>
+<p></p>
 
