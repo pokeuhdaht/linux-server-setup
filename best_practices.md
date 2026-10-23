@@ -10,17 +10,29 @@ Local User Account - used for creating other resources (eg. scripting, programmi
 For the above, we will create groups. In the event we need to create a new account with similar permissions, we can simply add create the user and add them to the necessary group.
 
 
-Disable Root Account
+<h3>Disable Root Account</h3>
 ===================
+You'll want to disable the root account as well as disable root SSH login.
+__Locking the account:__
+sudo passwd -l root
+
+__Edit Root Shell to non-login__
+sudo usermod -s /sbin/nologin root
+
+__Disable SSH login with root:__
+Inside the file: /etc/ssh/sshd_config
+add the following line:
 PermitRootLogin no
 
-Admin/sudo Account
+<h3>Admin/sudo Account</h3>
 ===================
 usermod -aG sudo [username]
 newgrp sudo
 
-Docker User Account (The "docker" group is created when docker engine is installed.)
+<h3>Docker User Account</h3>
 ===================
+(The "docker" group is created when docker engine is installed.)
+
 sudo usermod -aG docker [user]
 newgrp docker
 
