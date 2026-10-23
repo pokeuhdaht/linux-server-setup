@@ -4,8 +4,8 @@
 <p>What will be hosted here?</p>
 <ul>
   <li>Config files</li>
-  <li>.yaml files</li>
   <li>Bash Scripts</li>
   <li>Docker files</li>
+  <li>yaml files</li>
   <li>and more...?</li>
 </ul>
