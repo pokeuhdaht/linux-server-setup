@@ -33,14 +33,12 @@ usermod -aG sudo [username]
 newgrp sudo
 
 <h3>Docker User Account</h3>
-===================
 (The "docker" group is created when docker engine is installed.)
 
 sudo usermod -aG docker [user]
 newgrp docker
 
-Local User Account
-===================
+<h3>Local User Account</h3>
 sudo groupadd [groupname]
 sudo chgrp [groupname] /path/to/target       # This is the path to the file/directory   .... adding -R will allow the changes to be made recursively
 
