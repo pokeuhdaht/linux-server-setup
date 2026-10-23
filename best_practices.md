@@ -61,7 +61,9 @@ chmod 600 ~/.ssh/authorized_keys
 
 Inside the file: /etc/ssh/sshd_config
 add the following lines:
+
 PermitRootLogin no
+
 PasswordAuthentication no
 
 
