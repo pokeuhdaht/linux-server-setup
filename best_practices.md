@@ -44,7 +44,8 @@ sudo chgrp [groupname] /path/to/target
 
 (This is the path to the file/directory .... adding -R will allow the changes to be made recursively)
 
-sudo chmod 770 /path/to/target               # This will give Read, Write, & Execute permissions to the given file/directory to the (1) Owner (2) Group 
+sudo chmod 770 /path/to/target
+This will give Read, Write, & Execute permissions to the given file/directory to the (1) Owner (2) Group 
 
 
 
