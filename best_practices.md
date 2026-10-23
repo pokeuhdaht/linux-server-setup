@@ -17,7 +17,7 @@ You'll want to disable the root account as well as disable root SSH login (shown
 <ins>Locking the account:</ins>
 sudo passwd -l root
 
-<ins>Edit Root Shell to non-login</ins
+<ins>Edit Root Shell to non-login</ins>
 sudo usermod -s /sbin/nologin root
 
 <h3><ins>Admin/sudo Account</ins></h3>
