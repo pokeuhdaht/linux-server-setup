@@ -11,22 +11,13 @@ For the above, we will create groups. In the event we need to create a new accou
 
 
 <h3><ins>Disable Root Account</ins></h3>
-
-You'll want to disable the root account as well as disable root SSH login.
+You'll want to disable the root account as well as disable root SSH login (shown later).
 
 <ins>Locking the account:</ins>
-
 sudo passwd -l root
 
 <ins>Edit Root Shell to non-login</ins
-
 sudo usermod -s /sbin/nologin root
-
-<ins>Disable SSH login with root:</ins>
-
-Inside the file: /etc/ssh/sshd_config
-add the following line:
-PermitRootLogin no
 
 <h3><ins>Admin/sudo Account</ins></h3>
 usermod -aG sudo [username]
@@ -46,6 +37,32 @@ sudo chgrp [groupname] /path/to/target
 
 sudo chmod 770 /path/to/target
 This will give Read, Write, & Execute permissions to the given file/directory to the (1) Owner (2) Group 
+
+
+<h2>SSH Securely</h2>
+
+<h3><ins>Generate & Add Key Pair for SSH Login</ins></h3>
+Genereate Key Piar:
+ssh-keygen -t ed25519 -C "your_email@example.com"
+This will create two keys:
+id_ed25519 & id_ed25519.pub
+
+id_ed25519.pub needs to be copied to the Server
+ssh-copy-id username@server_ip_address
+
+If using windows you may have to do this manually.
+Copy the public key to ~/.ssh/authorized_keys
+
+Ensure that the folders have the security folders have the proper permissions:
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+<h3><ins>Disable root SSH and Password Authentication</ins></h3>
+
+Inside the file: /etc/ssh/sshd_config
+add the following lines:
+PermitRootLogin no
+PasswordAuthentication no
 
 
 
