@@ -11,21 +11,20 @@ For the above, we will create groups. In the event we need to create a new accou
 
 
 <h3>Disable Root Account</h3>
-===================
+
 You'll want to disable the root account as well as disable root SSH login.
-__Locking the account:__
+Locking the account:
 sudo passwd -l root
 
-__Edit Root Shell to non-login__
+Edit Root Shell to non-login
 sudo usermod -s /sbin/nologin root
 
-__Disable SSH login with root:__
+Disable SSH login with root:
 Inside the file: /etc/ssh/sshd_config
 add the following line:
 PermitRootLogin no
 
 <h3>Admin/sudo Account</h3>
-===================
 usermod -aG sudo [username]
 newgrp sudo
 
