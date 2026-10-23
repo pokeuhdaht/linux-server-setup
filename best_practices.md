@@ -15,12 +15,15 @@ For the above, we will create groups. In the event we need to create a new accou
 You'll want to disable the root account as well as disable root SSH login.
 
 <ins>Locking the account:</ins>
+
 sudo passwd -l root
 
-Edit Root Shell to non-login
+<ins>Edit Root Shell to non-login</ins
+
 sudo usermod -s /sbin/nologin root
 
-Disable SSH login with root:
+<ins>Disable SSH login with root:</ins>
+
 Inside the file: /etc/ssh/sshd_config
 add the following line:
 PermitRootLogin no
