@@ -10,8 +10,7 @@ Local User Account - used for creating other resources (eg. scripting, programmi
 For the above, we will create groups. In the event we need to create a new account with similar permissions, we can simply add create the user and add them to the necessary group.
 
 
-<h3><ins>Disable Root Account</ins></h3>ins></h3>
------------------------------
+<h3><ins>Disable Root Account</ins></h3>
 
 You'll want to disable the root account as well as disable root SSH login.
 
