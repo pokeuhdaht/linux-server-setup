@@ -40,7 +40,8 @@ newgrp docker
 
 <h3><ins>Local User Account</ins></h3>
 sudo groupadd [groupname]
-sudo chgrp [groupname] /path/to/target       # This is the path to the file/directory   .... adding -R will allow the changes to be made recursively
+sudo chgrp [groupname] /path/to/target
+(This is the path to the file/directory .... adding -R will allow the changes to be made recursively)
 
 sudo chmod 770 /path/to/target               # This will give Read, Write, & Execute permissions to the given file/directory to the (1) Owner (2) Group 
 
