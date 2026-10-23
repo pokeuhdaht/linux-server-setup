@@ -5,7 +5,8 @@
 <ul>
   <li>Config files</li>
   <li>Bash Scripts</li>
+  <li>Best Practices</li>
   <li>Docker files</li>
-  <li>yaml files</li>
+  <li>Yaml files</li>
   <li>and more...?</li>
 </ul>
