@@ -13,7 +13,8 @@ For the above, we will create groups. In the event we need to create a new accou
 <h3>Disable Root Account</h3>
 
 You'll want to disable the root account as well as disable root SSH login.
-Locking the account:
+
+<ins>Locking the account:</ins>
 sudo passwd -l root
 
 Edit Root Shell to non-login
